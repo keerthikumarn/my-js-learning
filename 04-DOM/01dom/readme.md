@@ -1,54 +1,40 @@
-## _Objects in JavaScript_
-Objects are an important data type in JavaScript. They allow you to store data in a structured, key-value manner.
+## _Introduction to the DOM in JavaScript_
+The DOM (Document Object Model) is a programming interface for web documents. It represents the page so that programs can change the document structure, style, and content. JavaScript can use the DOM to access and manipulate a web page.
 
-### Creating Objects
-There are a few ways to create objects in JavaScript:
-
-The DOM (Document Object Model) is a programming interface for web documents. It represents the page so that programs can change the document structure, style, and content. The DOM represents the document as nodes and objects, so that programming languages can interact with the page.
+### Accessing the DOM
+The document object represents the entire web page. To access any element on the page, you start with the document object.
 
 ```
-// Using object literals
-const person = {
-  firstName: "Keerthi",
-  lastName: "Kumar",
-  age: 39
-};
-
-// Using the Object constructor
-const person = new Object();
-person.firstName = "Java";
-person.lastName = "Developer";
-person.age = 27; 
-
-// Using an object constructor
-function Person(firstName, lastName, age) {
-  this.firstName = firstName;
-  this.lastName = lastName;
-  this.age = age;
-}
-const person = new Person("Test", "User", 48);
+// Get document object
+const document = window.document; 
+// Get HTML element by ID
+const section = document.getElementById("main-section");
 ```
 
-### Accessing Object Properties
-You can access object properties using dot notation or bracket notation:
+### Modifying the DOM
+The DOM provides methods for modifying page elements. For example:
 
 ```
-const employee = {
-  firstName: "Keerthi"  
-};
-console.log(employee.firstName); // dot notation
-console.log(employee["firstName"]); // bracket notation
+// Get element
+const heading = document.getElementById("page-title");
+// Modify text
+heading.textContent = "New page title"; 
+// Modify CSS styles
+heading.style.color = "blue";
 ```
 
-### Object Methods
-You can add methods (functions inside objects) like this:
+### Creating Elements
+You can create new DOM elements and add them to the page.
 
 ```
-const employee = {
-  firstName: "Kumar",
-  greet() {
-    console.log(`Hello, my name is ${this.firstName}!`);  
-  }
-}
-person.greet(); // call the method
+// Create new element 
+const newDiv = document.createElement("div");
+// Add CSS styles
+newDiv.style.cssText = "background: grey; font-size: 20px";
+// Add text content 
+newDiv.textContent = "This is a new element";
+// Add to document
+document.body.appendChild(newDiv);
 ```
+
+#### The DOM allows JavaScript to dynamically modify practically anything about a webpage. It is a very powerful tool for building interactive webpages.
