@@ -52,3 +52,27 @@ const employee = {
 }
 person.greet(); // call the method
 ```
+
+### Proto in javascript
+
+All JavaScript objects have a hidden __proto__ property that makes inheritance and the prototype chain work in JavaScript.
+
+Understanding Prototype Objects
+When you try to access a property on an object, if that property doesn't exist on the object itself, JavaScript will automatically check the object's prototype object instead.
+
+So you can have objects that inherit properties and methods from a prototype:
+
+```
+// Person constructor 
+function Person(firstName) {
+  this.firstName = firstName;
+}
+// Add a method to Person.prototype
+Person.prototype.sayHi = function() {
+  console.log(`Hello, I'm ${this.firstName}`);  
+}
+// peter inherits the sayHello method  
+const kumar = new Person('Kumar'); 
+kumar.sayHi(); // => "Hello, I'm Kumar"
+```
+Here kumar inherits from Person.prototype. This is known as prototypal inheritance.
