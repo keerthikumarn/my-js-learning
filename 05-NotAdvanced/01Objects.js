@@ -16,7 +16,13 @@ Employee.prototype.getFullName = function() {
 
 var keerthi = new Employee("Keerthi Kumar N", "Technical Architect", 39); 
 //console.log(keerthiObj);
-keerthi.getFullName();
+
+if(keerthi.hasOwnProperty("empNamee")) {
+    keerthi.getFullName(); // this will not be executed as there is not property named empNamee
+}
+if(keerthi.hasOwnProperty("empName")) {
+    keerthi.getFullName();
+}
 keerthi.getAge();
 
 var gautam = new Employee("Gautam A P", "Development Manager", 38); 

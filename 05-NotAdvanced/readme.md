@@ -76,3 +76,14 @@ const kumar = new Person('Kumar');
 kumar.sayHi(); // => "Hello, I'm Kumar"
 ```
 Here kumar inherits from Person.prototype. This is known as prototypal inheritance.
+
+### The Prototype Chain
+This __proto__ linking from one object to another creates a prototype chain. When we try to access properties/methods JavaScript will walk up this chain until it finds it.
+
+### Instanceof
+You can check if an object inherits from another object using the instanceof operator:
+
+```
+kumar instanceof Person; // returns true
+```
+The prototype chain is an essential mechanism in JS and allows for inheritance and reuse in an elegant way.
