@@ -1,0 +1,9 @@
+
+
+if(true) {
+    //var name = "Keerthi Kumar N"; //this allows the variable to be accessed even outside the loop
+    let name = "Keerthi Kumar N";
+}
+
+//console.log(name); //will print the name
+console.log(name); //will throw an error- undefined
