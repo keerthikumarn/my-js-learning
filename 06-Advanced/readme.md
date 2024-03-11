@@ -117,3 +117,35 @@ printDetails(person); // Name: Keerthi Kumar, Age: 38
 - Useful for working with nested data structures and function parameters.
 
 Destructuring is a powerful feature in JavaScript that can help make your code more expressive, concise, and maintainable. It's widely used in modern JavaScript development and is an essential tool in any JavaScript developer's toolkit.
+
+### Spread Operator in JavaScript
+The spread operator (...) is a JavaScript operator introduced in ES6 (ES2015) that allows an iterable, such as an array or string, to be expanded or spread into individual elements. It can be used in various contexts, including function calls, array literals, and object literals.
+
+**Spread with Array Literals**
+The spread operator can be used to create a new array by spreading the elements of one or more arrays into it.
+```
+const numbers = [1, 2, 3];
+const moreNumbers = [...numbers, 4, 5]; // [1, 2, 3, 4, 5]
+```
+It can also be used to concatenate arrays:
+```
+const arr1 = [1, 2, 3];
+const arr2 = [4, 5, 6];
+const combined = [...arr1, ...arr2]; // [1, 2, 3, 4, 5, 6]
+```
+**Spread with Function Calls**
+The spread operator can be used to pass an array as individual arguments to a function.
+```
+function sum(a, b, c) {
+  return a + b + c;
+}
+const numbers = [1, 2, 3];
+const result = sum(...numbers); // 6
+```
+**Benefits of the Spread Operator**
+- Provides a concise syntax for working with arrays and objects.
+- Avoids the need for methods like concat, slice, apply, and Object.assign in certain cases.
+- Improves code readability by making it easier to understand how arrays and objects are being manipulated.
+- Simplifies the process of creating shallow copies of arrays and objects.
+
+The spread operator is a powerful and versatile feature in JavaScript that can help make your code more concise, readable, and expressive. It's widely used in modern JavaScript development and is an essential tool in any JavaScript developer's toolkit.
