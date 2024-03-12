@@ -20,12 +20,29 @@ class User {
     }
 }
 
+class SubAdmin extends User {
+    constructor(name, email) {
+      super(name, email);
+    }
+    getAdminInfo() {
+      return "I am subadmin";
+    }
+    login() {
+      return "login for admin only";
+    }
+  }
+
 
 module.exports = User;
 
 const keerthi = new User("Keerthi Kumar N", "keerthi@no-reply.com");
-console.log(keerthi.getInfo());
-keerthi.enrollCourse("Advanced Java");
+//console.log(rock.getInfo());
 keerthi.enrollCourse("Springboot");
-console.log(keerthi.getCourseList());
-console.log(keerthi.courseList);
+// console.log(rock.getCourseList());
+// console.log(rock.courseList);
+
+const gautam = new SubAdmin("Gautam", "gautam@no-reply.com");
+console.log(gautam.getAdminInfo());
+console.log(gautam.login());
+
+console.log(gautam.getInfo());
