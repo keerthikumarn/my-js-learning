@@ -6,4 +6,4 @@ fetch('https://api.chucknorris.io/jokes/random')
     var joke = data.value;
     console.log("JOKE : ", joke);
 })
-.catch()
+.catch();
